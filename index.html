@@ -24,11 +24,20 @@
       box-sizing: inherit;
     }
 
+
     .panels {
-      min-height: 100vh;
-      overflow: hidden;
-      display: flex;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
     }
+
+.row {
+    display: flex;
+    gap: 10px; 
+    min-height: 50vh; 
+    }
+
 
     .panel {
       background: #6B0F9C;
@@ -63,7 +72,7 @@
       margin: 0;
       width: 100%;
       transition: transform 0.5s;
-      border: 1px solid red;
+      
       flex: 1 0 auto;
       display: flex;
       justify-content: center;
@@ -91,36 +100,50 @@
       font-size: 40px;
     }
 
+    .panel:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    }
+
+
   </style>
 
 
-  <div class="panels">
-    <div class="panel panel1">
-      <p>Get</p>
-      <p>Let's</p>
-      <p>Away</p>
+<div class="panels">
+    <!-- First row -->
+    <div class="row">
+      <div class="panel panel1">
+        <p>Get</p>
+        <p>Let's</p>
+        <p>Away</p>
+      </div>
+      <div class="panel panel2">
+        <p>A</p>
+        <p>Take</p>
+        <p>Chance</p>
+      </div>
+      <div class="panel panel3">
+        <p>Experience</p>
+        <p>It</p>
+        <p>Today</p>
+      </div>
     </div>
-    <div class="panel panel2">
-      <p>A</p>
-      <p>Take</p>
-      <p>Chance</p>
-    </div>
-    <div class="panel panel3">
-      <p>Experience</p>
-      <p>It</p>
-      <p>Today</p>
-    </div>
-    <div class="panel panel4">
-      <p>Enjoy</p>
-      <p>All</p>
-      <p>You can Enjoy</p>
-    </div>
-    <div class="panel panel5">
-      <p>All Challenge's </p>
-      <p>In</p>
-      <p>Stride</p>
+  
+    <!-- Second row -->
+    <div class="row">
+      <div class="panel panel4">
+        <p>Enjoy</p>
+        <p>All</p>
+        <p>You Can</p>
+      </div>
+      <div class="panel panel5">
+        <p>All Challenges</p>
+        <p>In</p>
+        <p>Stride</p>
+      </div>
     </div>
   </div>
+  
 
   <script>
     const panels = document.querySelectorAll('.panel');
